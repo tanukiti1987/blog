@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-09T16:42:20+09:00</updated><id>http://localhost:4000//</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Bitbar いろいろ使えそう</title><link href="http://localhost:4000/ruby/2016/04/10/bitbar.html" rel="alternate" type="text/html" title="Bitbar いろいろ使えそう" /><published>2016-04-10T20:59:18+09:00</published><updated>2016-04-10T20:59:18+09:00</updated><id>http://localhost:4000/ruby/2016/04/10/bitbar</id><content type="html" xml:base="http://localhost:4000/ruby/2016/04/10/bitbar.html">&lt;h1 id=&quot;bitbar&quot;&gt;Bitbar&lt;/h1&gt;
+
+&lt;p&gt;MacOS で使える &lt;a href=&quot;https://github.com/matryer/bitbar&quot;&gt;Bitbar&lt;/a&gt; という、MenuBar に自分の好きな情報をスクリプトによって表示できるツールがすごく便利に使えそうなので、ご紹介です。&lt;/p&gt;
+
+&lt;h1 id=&quot;使いかたはとても簡単&quot;&gt;使いかたはとても簡単&lt;/h1&gt;
+
+&lt;p&gt;まずは、Bitbar のアプリケーションを &lt;a href=&quot;https://github.com/matryer/bitbar/releases&quot;&gt;ダウンロード&lt;/a&gt; します。&lt;/p&gt;
+
+&lt;p&gt;そして、適当なディレクトリの下で適当なスクリプトを書いていきます。&lt;/p&gt;
+
+&lt;p&gt;スクリプト言語なら何でも行けそうな感じがしますが、ボクはひとまず Rubyを使って書いてます。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env ruby&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# yahoo.10s.sh&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;yahoo! | href=http://www.yahoo.co.jp/&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;みたいなスクリプトを書き、そのファイルに対して &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod +x yahoo.10s.sh&lt;/code&gt; と、実行権限を与えて、 plugin directory というファイルの置いている場所を bitbar のアプリケーションを起動した時に指定してあげると、MenuBar にヤフーのリンクが出る。と言った具合になります。&lt;/p&gt;
+
+&lt;h1 id=&quot;例えばこんな使いかた&quot;&gt;例えばこんな使いかた&lt;/h1&gt;
+
+&lt;p&gt;シンプルなスクリプトを書き、MenuBarを拡張できるのはかなり便利です。&lt;/p&gt;
+
+&lt;p&gt;ボクは FX で使っている OANDA のAPIを使用して、為替相場と自分の口座の状況を表示するものを作ってみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160410_bitbar/bitbar.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;OANDA のAPI自体はデモ口座を開いて使うのでも簡単に登録できますし、為替相場を常に知っておきたい。みたいな方があれば、ソースコードを以下に乗せておりますので、ぜひ使ってみてください。&lt;/p&gt;
+
+&lt;p&gt;https://github.com/tanukiti1987/bitbar_plugins/blob/master/oanda.10s.sh&lt;/p&gt;
+
+&lt;p&gt;(くれぐれも API token をgithubにアップしないように気をつけてください。。)&lt;/p&gt;</content><summary type="html">Bitbar</summary></entry><entry><title type="html">content_for_once というgemをリリースしました</title><link href="http://localhost:4000/ruby/gem/2016/04/09/content-for-once.html" rel="alternate" type="text/html" title="content_for_once というgemをリリースしました" /><published>2016-04-09T21:35:29+09:00</published><updated>2016-04-09T21:35:29+09:00</updated><id>http://localhost:4000/ruby/gem/2016/04/09/content-for-once</id><content type="html" xml:base="http://localhost:4000/ruby/gem/2016/04/09/content-for-once.html">&lt;p&gt;Railsで、viewファイルに対して、&lt;code class=&quot;highlighter-rouge&quot;&gt;javascript_include_tag&lt;/code&gt; や &lt;code class=&quot;highlighter-rouge&quot;&gt;stylesheet_link_tag&lt;/code&gt; を多重に読み込んでしまうような書き方をしてしまうことって、ありますよね。&lt;/p&gt;
+
+&lt;p&gt;重複して css や js ファイルを読み込んでしまうことで、スタイルが壊れてしまったり、jsの動きがおかしくなってしまったり。。。などなど、困ることも多いです。&lt;/p&gt;
+
+&lt;p&gt;content_for_once はそれを解決するための gem です。&lt;/p&gt;
+
+&lt;h2 id=&quot;content_for_once&quot;&gt;content_for_once&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;content_for_once&lt;/code&gt; というフレーズをグーグルなどで検索していみると、 &lt;a href=&quot;http://blog.s21g.com/articles/203&quot;&gt;この記事&lt;/a&gt; にあたるのですが、私の記事で紹介する内容は、呼び名こそ同じものの、少し動きを変えております。&lt;/p&gt;
+
+&lt;p&gt;先ほどの記事では Rails に対してライブラリを追加するとき &lt;code class=&quot;highlighter-rouge&quot;&gt;script/plugin&lt;/code&gt; というコマンドによりライブラリを追加するのが標準だった頃の内容でした。(ボクはその時代のRailsをよく知らない。。)&lt;/p&gt;
+
+&lt;p&gt;現在ではみなさんもお馴染みのgemによるライブラリの配布が主流になり、この配布の形に乗せて、似たようなものを使いたい。という思いがありました。&lt;/p&gt;
+
+&lt;p&gt;https://rubygems.org/gems/content_for_once&lt;/p&gt;
+
+&lt;p&gt;命名に関してですが、&lt;code class=&quot;highlighter-rouge&quot;&gt;content_for_once&lt;/code&gt; という名前でプラグインをブログ記事を書かれている方がいたのですが、&lt;code class=&quot;highlighter-rouge&quot;&gt;content_for_once&lt;/code&gt; いい名前だよな。。というのと、オリジナルの &lt;code class=&quot;highlighter-rouge&quot;&gt;content_for_once&lt;/code&gt; はpluginの形で公表されているものの、ソースコード自体はもうリンク切れになっており、流通も少なそうな雰囲気を受けたので、オリジナル作者の方に連絡をして、名前やら処理の内容を変更することに許可を頂き、&lt;code class=&quot;highlighter-rouge&quot;&gt;content_for_once&lt;/code&gt; という名前をつけました。&lt;/p&gt;
+
+&lt;h2 id=&quot;使いかた&quot;&gt;使いかた&lt;/h2&gt;
+
+&lt;div class=&quot;language-haml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;-# app/views/layout/application.html.haml
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:css&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;-# articles/index.html.haml
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@articles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;article&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'article'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;article: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;article&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;-# articles/_article.html.haml
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content_for_once&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:css&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stylesheet_link_tag&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'article'&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.article&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;.title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;article&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;こんな感じに、 &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html.haml&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;_article.html.haml&lt;/code&gt; に同じcssを読み込むような記述を書いたとしても、従来の &lt;code class=&quot;highlighter-rouge&quot;&gt;content_for&lt;/code&gt; では2つの &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;article.css&quot;&amp;gt;&lt;/code&gt; が挿入されてしまうところ、 &lt;code class=&quot;highlighter-rouge&quot;&gt;content_for_once&lt;/code&gt; を使えば、1度だけの挿入で済むようになります。&lt;/p&gt;
+
+&lt;h2 id=&quot;まとめ&quot;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;もしよろしければ、ご利用頂いたり、PRやissue などでアドバイスいただければと思います mm&lt;/p&gt;</content><summary type="html">Railsで、viewファイルに対して、javascript_include_tag や stylesheet_link_tag を多重に読み込んでしまうような書き方をしてしまうことって、ありますよね。</summary></entry><entry><title type="html">バイナリオプション 2016/02/22-03/04</title><link href="http://localhost:4000/fx/highlow/2016/03/05/highlow.html" rel="alternate" type="text/html" title="バイナリオプション 2016/02/22-03/04" /><published>2016-03-05T14:35:00+09:00</published><updated>2016-03-05T14:35:00+09:00</updated><id>http://localhost:4000/fx/highlow/2016/03/05/highlow</id><content type="html" xml:base="http://localhost:4000/fx/highlow/2016/03/05/highlow.html">&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160305_highlow/2016-03-05_14_38_31.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;総括&quot;&gt;総括&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;8エントリー 3勝4敗1分&lt;/strong&gt; でした。&lt;/p&gt;
+
+&lt;p&gt;特に個人的なエントリーシグナルを明確に持っていないためか、デモトレードを試してみても、予想が外れることが多く、勝率50%は切っていました。&lt;/p&gt;
+
+&lt;p&gt;今週は、僕が使ってる &lt;a href=&quot;https://jp.highlow.net/&quot;&gt;HIGHLOW&lt;/a&gt; のサイトでは、ジャパンネット銀行からの入金で5000円キャッシュバックをやっていました。&lt;/p&gt;
+
+&lt;p&gt;銀行口座は持っていたので、5000円キャッシュバックをもらい、ポチポチ遊んでいた感じです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.tanukiti1987.com/blog/2016/03/01/zone/&quot;&gt;ゾーン — 相場心理学入門 は心得ておくメンタルの築き方がたくさんある&lt;/a&gt; にも書いたように、利益を出せても、損失を出しても、こんなもんかな。というメンタリティーにはなってきているのですが、何よりシグナルを明確に決めてトライしないといけないんでしょうな。&lt;/p&gt;
+
+&lt;h1 id=&quot;kpt&quot;&gt;KPT&lt;/h1&gt;
+
+&lt;p&gt;ほぼエントリーしてないので、KPTもほとんど変わらないかな。&lt;/p&gt;
+
+&lt;h2 id=&quot;keep&quot;&gt;Keep&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;必ず1000円ずつエントリーする&lt;/li&gt;
+  &lt;li&gt;エントリー後の不安が少なくなってきた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;的中が外れ続けると、エントリーの金額を大きくしたくなるメンタル&lt;/li&gt;
+  &lt;li&gt;エントリーシグナルが決まっていない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;try&quot;&gt;Try&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;High&amp;amp;Lowの画面だけで引き続きトレードする&lt;/li&gt;
+  &lt;li&gt;基本1分のトレードだが、3分や5分のチャートを見る必要もないかも&lt;/li&gt;
+  &lt;li&gt;エントリーシグナルを決めてみる&lt;/li&gt;
+  &lt;li&gt;レンジ相場に入っていると判断できる指標があればエントリーしやすそう&lt;/li&gt;
+  &lt;li&gt;トレンド相場担っている時に順張りする決断力があればエントリーしやすそう&lt;/li&gt;
+&lt;/ul&gt;</content><summary type="html"></summary></entry><entry><title type="html">ゾーン — 相場心理学入門 は心得ておくメンタルの築き方がたくさんある</title><link href="http://localhost:4000/2016/03/01/zone.html" rel="alternate" type="text/html" title="ゾーン — 相場心理学入門 は心得ておくメンタルの築き方がたくさんある" /><published>2016-03-01T22:02:05+09:00</published><updated>2016-03-01T22:02:05+09:00</updated><id>http://localhost:4000/2016/03/01/zone</id><content type="html" xml:base="http://localhost:4000/2016/03/01/zone.html">&lt;div style=&quot;width:50%; margin:0 auto;&quot;&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4939103579/ref=as_li_ss_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4939103579&amp;amp;linkCode=as2&amp;amp;tag=tanukiti_blog-22&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;ASIN=4939103579&amp;amp;Format=_SL250_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=tanukiti_blog-22&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=tanukiti_blog-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4939103579&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;他の投資の本にはないメンタルの築き方&quot;&gt;他の投資の本にはない、メンタルの築き方&lt;/h2&gt;
+
+&lt;p&gt;株式、FX、先物などなど、試してみたけど、痛い目にしか合ってない。&lt;/p&gt;
+
+&lt;p&gt;そんな思いを、誰しも一度は経験したのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;僕ももちろんそうですし、なかなかこの考え方を変えるのはむずかしいですよね。&lt;/p&gt;
+
+&lt;p&gt;この本では、どういう心持ちで相場と対峙すればよいか、どう建玉を行い、利食いをしたいり、損切りをしたりすればよいか。というところを紐解いた本になります。&lt;/p&gt;
+
+&lt;p&gt;この本には必勝法が書かれているわけではありません。&lt;/p&gt;
+
+&lt;p&gt;むしろ、必勝法というものは存在せず、気分を上下させることなく、確率的に利益のあげられる方法で取引していくべし。といった内容が書かれています。&lt;/p&gt;
+
+&lt;h2 id=&quot;印象に残ったこと&quot;&gt;印象に残ったこと&lt;/h2&gt;
+
+&lt;p&gt;以下、引用をタイトルとします。&lt;/p&gt;
+
+&lt;h3 id=&quot;知れば知るほど気が弱くなる気が弱くなればなるほど知らなければならないと感じる&quot;&gt;知れば知るほど気が弱くなる。気が弱くなればなるほど知らなければならないと感じる&lt;/h3&gt;
+
+&lt;p&gt;あるあるですね。&lt;/p&gt;
+
+&lt;p&gt;ファンダメンタル指標を読んでみたり、テクニカル分析に詳しくなったりして、いろんな角度から相場を見られるようになっていきます。&lt;/p&gt;
+
+&lt;p&gt;ところが、それらを知れば知るほど、怖くて取引ができない。&lt;/p&gt;
+
+&lt;p&gt;自分が売買しようとしている方向に良い指標であれ、悪い指標であれ、それとは逆に相場が動くことも知っているからですね。&lt;/p&gt;
+
+&lt;p&gt;本の読み始め序盤に出てくる文章ですが、非常に印象に残っています。&lt;/p&gt;
+
+&lt;h3 id=&quot;次に何が起ころうとしているか知っておく必要があると確信する度合いが強いほどトレードに失敗する可能性が高まるのである&quot;&gt;次に何が起ころうとしているか知っておく必要があると確信する度合いが強いほど、トレードに失敗する可能性が高まるのである。&lt;/h3&gt;
+
+&lt;p&gt;関連する文章でもあります。&lt;/p&gt;
+
+&lt;p&gt;材料を集め、自分の中で取引に確信が高まれば高まるほど、思った通りに動かなかったときのショックは大きく、また次の取引を恐怖に感じさせてしまう。&lt;/p&gt;
+
+&lt;p&gt;一方で思った方向に動いたら動いたで、自信を感じ、建玉を大きくし、近いうちに大きな損失を出してしまう。&lt;/p&gt;
+
+&lt;p&gt;何か知ることで、まっすぐな確信で１トレードを進めていくのは危ういというお話でした。&lt;/p&gt;
+
+&lt;h3 id=&quot;前回のトレードに負けて次のトレードを仕掛けるときの自分の恐怖ためらいよりも不合理だと言えるだろうか&quot;&gt;前回のトレードに負けて次のトレードを仕掛けるときの自分の恐怖（ためらい）よりも、不合理だと言えるだろうか。&lt;/h3&gt;
+
+&lt;p&gt;この本の中で出てくる、初めて犬にあった少年の例が僕の中ではとってもしっくり来ています。&lt;/p&gt;
+
+&lt;p&gt;生まれて初めて犬に出会った少年。犬は機嫌が悪く、近寄ってくる少年に噛み付いた。&lt;/p&gt;
+
+&lt;p&gt;少年はそこから「犬」というものが恐怖になり、次にあった人懐こい「犬」に対しても恐怖を抱いた。&lt;/p&gt;
+
+&lt;p&gt;この例は非常にしっくりくるもので、また「犬」を「相場」に置き換えて筆者は説明を進めていきます。&lt;/p&gt;
+
+&lt;p&gt;最初にあった犬が怖かったから、次の犬にあっても恐怖心は拭えない。不合理なことだとわかりつつ、少年の気持ちになればそれは当たり前。&lt;/p&gt;
+
+&lt;p&gt;それであれば、その不合理さに気がつこうじゃないの。というのが筆者の語り口でもありました。&lt;/p&gt;
+
+&lt;h2 id=&quot;続きは本にて&quot;&gt;続きは本にて&lt;/h2&gt;
+
+&lt;p&gt;他にもたくさん引用したい箇所はありますが、あまり引用してしまっても真意をお伝えすることのできぬままになってしまそうなので、ぜひ続きは&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/gp/product/4939103579/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=4939103579&amp;amp;linkCode=as2&amp;amp;tag=tanukiti_blog-22&quot;&gt;ゾーン — 相場心理学入門&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=tanukiti_blog-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=4939103579&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;にて。 時にはユーモアにあふれるたとえと共に、トレードをする人たちのメンタルにヒントを与えてくれる一冊になると思います。&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">バイナリオプション 2016/02/15-19</title><link href="http://localhost:4000/fx/highlow/2016/02/22/highlow.html" rel="alternate" type="text/html" title="バイナリオプション 2016/02/15-19" /><published>2016-02-22T00:45:12+09:00</published><updated>2016-02-22T00:45:12+09:00</updated><id>http://localhost:4000/fx/highlow/2016/02/22/highlow</id><content type="html" xml:base="http://localhost:4000/fx/highlow/2016/02/22/highlow.html">&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160222_highlow/2016-02-22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;総括&quot;&gt;総括&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;3エントリー 1勝1敗1分&lt;/strong&gt; でした。&lt;/p&gt;
+
+&lt;p&gt;トントンというか、なんというか。&lt;/p&gt;
+
+&lt;p&gt;仕事が忙しすぎて、ほとんどトレードできずでした。&lt;/p&gt;
+
+&lt;p&gt;相場的には行ったり来たりの相場だったようで、僕がトレードしていたときも、あまり方向感なく、ちょっとやりづらさはあったりしました。&lt;/p&gt;
+
+&lt;p&gt;今週は少し腰を据えてエントリーしたいところ。&lt;/p&gt;
+
+&lt;p&gt;合わせて、デモトレードで少しトレーニングしてみたい。&lt;/p&gt;
+
+&lt;h1 id=&quot;kpt&quot;&gt;KPT&lt;/h1&gt;
+
+&lt;p&gt;ほぼエントリーしてないので、KPTもほとんど変わらないかな。&lt;/p&gt;
+
+&lt;h2 id=&quot;keep&quot;&gt;Keep&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;必ず1000円ずつエントリーする&lt;/li&gt;
+  &lt;li&gt;エントリー後の不安が少なくなってきた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;的中が外れ続けると、エントリーの金額を大きくしたくなるメンタル&lt;/li&gt;
+  &lt;li&gt;high&amp;amp;low の画面以外の情報を見てると、邪念が大きい&lt;/li&gt;
+  &lt;li&gt;強いトレンドの中で逆張りしない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;try&quot;&gt;Try&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;レンジに入った時、資金を失う恐怖と離れ、エントリーする&lt;/li&gt;
+  &lt;li&gt;High&amp;amp;Lowの画面だけで引き続きトレードする&lt;/li&gt;
+  &lt;li&gt;基本1分のトレードだが、3分や5分のチャートを見る必要もないかも&lt;/li&gt;
+&lt;/ul&gt;</content><summary type="html"></summary></entry><entry><title type="html">バイナリオプション 2016/02/08-12</title><link href="http://localhost:4000/fx/highlow/2016/02/13/binary.html" rel="alternate" type="text/html" title="バイナリオプション 2016/02/08-12" /><published>2016-02-13T07:39:19+09:00</published><updated>2016-02-13T07:39:19+09:00</updated><id>http://localhost:4000/fx/highlow/2016/02/13/binary</id><content type="html" xml:base="http://localhost:4000/fx/highlow/2016/02/13/binary.html">&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160213_highlow/2016-02-13+07.32.07.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;総括&quot;&gt;総括&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;27エントリー 14勝12敗1分&lt;/strong&gt; でした。&lt;/p&gt;
+
+&lt;p&gt;ただ、勝とか敗とか書くのは、今読んでる本の発想からもちょっと違うのかもしれない。&lt;/p&gt;
+
+&lt;p&gt;ともあれ、50%以上の的中率はなんとか維持できました。&lt;/p&gt;
+
+&lt;h1 id=&quot;kpt&quot;&gt;KPT&lt;/h1&gt;
+
+&lt;h2 id=&quot;keep&quot;&gt;Keep&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;必ず1000円ずつエントリーする&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;的中が外れ続けると、エントリーの金額を大きくしたくなるメンタル&lt;/li&gt;
+  &lt;li&gt;high&amp;amp;low の画面以外の情報を見てると、邪念が大きい&lt;/li&gt;
+  &lt;li&gt;強いトレンドの中で逆張りしない&lt;/li&gt;
+  &lt;li&gt;エントリーしても不安。。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;try&quot;&gt;Try&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;レンジに入った時、資金を失う恐怖と離れ、エントリーする&lt;/li&gt;
+  &lt;li&gt;High&amp;amp;Lowの画面だけで引き続きトレードする&lt;/li&gt;
+  &lt;li&gt;基本1分のトレードだが、3分や5分のチャートを見る必要もないかも&lt;/li&gt;
+  &lt;li&gt;エントリー金額のルールをただ守る。無意識に守る&lt;/li&gt;
+  &lt;li&gt;エントリーした責任をもって、後悔しない。振り返るのみ。&lt;/li&gt;
+&lt;/ul&gt;</content><summary type="html"></summary></entry><entry><title type="html">bellroy の財布が薄くてすごくいい</title><link href="http://localhost:4000/diary/2016/02/11/bellroy.html" rel="alternate" type="text/html" title="bellroy の財布が薄くてすごくいい" /><published>2016-02-11T21:02:55+09:00</published><updated>2016-02-11T21:02:55+09:00</updated><id>http://localhost:4000/diary/2016/02/11/bellroy</id><content type="html" xml:base="http://localhost:4000/diary/2016/02/11/bellroy.html">&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160211_bellroy/2016-02-11+21.01.20.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;belloy-の財布最高&quot;&gt;Belloy の財布、最高&lt;/h1&gt;
+
+&lt;p&gt;いつもズボンのポケットに入れている財布。&lt;/p&gt;
+
+&lt;p&gt;この財布になる前は、一度は使ってみたいと思っていたブランドの財布を使っていました。&lt;/p&gt;
+
+&lt;p&gt;少し大きくて、ていねいに使っていたつもりだったけど、有名ブランドとはいえ、あっという間にボロボロになってしまい、新しい財布として、この財布を買ってみました。&lt;/p&gt;
+
+&lt;h1 id=&quot;made-in-australia&quot;&gt;Made in Australia&lt;/h1&gt;
+
+&lt;p&gt;あまり聞いたことがないブランドだったのですが、オーストラリアのブランドのようです。&lt;/p&gt;
+
+&lt;p&gt;僕が買った時は日本語でサイトをみることができなかったのですが、今は日本語対応もしているみたい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bellroy.com/&quot;&gt;bellroy&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;薄いは正義&quot;&gt;薄いは正義&lt;/h1&gt;
+
+&lt;p&gt;僕が買ったのは &lt;a href=&quot;http://bellroy.com/wallets/note-sleeve-wallet?color=cocoa&quot;&gt;これ&lt;/a&gt;なのですが、とにかく薄い。&lt;/p&gt;
+
+&lt;p&gt;どれくらい薄いかというと、8枚切りのトーストよりも薄い。&lt;/p&gt;
+
+&lt;p&gt;ポケットに財布を入れて普段使いをするので、この薄さがなにより最高なのです。&lt;/p&gt;
+
+&lt;h2 id=&quot;ただしカードは4枚くらいしか入らない&quot;&gt;ただしカードは4枚くらいしか入らない&lt;/h2&gt;
+
+&lt;p&gt;残念な人には残念なお知らせなのですが、このおさいふ。カードはあまり入りません。&lt;/p&gt;
+
+&lt;p&gt;ただ、がっかりすることはありません。&lt;/p&gt;
+
+&lt;p&gt;免許証、キャッシュカード、クレジットカード、保険証、SUICA あたりが入れば十分ではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160211_bellroy/2016-02-11+21.02.52.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;たまりに溜まっていくポイントカードは、受け取らないか、受け取ったとしても家においておいて、必要なときにだけ持ち運ぶようにしています。&lt;/p&gt;
+
+&lt;p&gt;家においてあって、たまーに困ることもあるけれど、お店によっては「ポイントカード、忘れちゃいました」と言っておけば、レシートを次回持参でポイントをつけてくれる。なんてところも多いですね。&lt;/p&gt;
+
+&lt;h2 id=&quot;小銭も実はあんまり入らない&quot;&gt;小銭も実はあんまり入らない&lt;/h2&gt;
+
+&lt;p&gt;小銭は、財布の中に小さなポケットがあって、あまり大量に硬貨を入れておくことはできません。&lt;/p&gt;
+
+&lt;p&gt;僕はいつも500円玉と100円玉を1枚ずつ入れておくくらい。&lt;/p&gt;
+
+&lt;p&gt;基本的にお金は1000円単位で支払いをして、受け取った硬貨はズボンに入れておきます。&lt;/p&gt;
+
+&lt;p&gt;ポケットがない服を着てる時は困るかもしれないけど、いまのところ困ったことはないです。&lt;/p&gt;
+
+&lt;p&gt;一日の終わり、余った硬貨は全部貯金箱にほうり込み、財布に硬貨を残すことはありません。&lt;/p&gt;
+
+&lt;p&gt;財布のお金が減るのは若干早くなるけれど、それゆえに節約しようという気持ちにもなるし、硬貨貯金はモリモリ溜まっていくし、個人的にはこのスタイルは結構すきになっています。&lt;/p&gt;
+
+&lt;h1 id=&quot;simカード入れが地味に便利&quot;&gt;SIMカード入れが地味に便利&lt;/h1&gt;
+
+&lt;p&gt;海外発の財布だからか、SIMを複数枚持っているのを前提としていて、財布にSIMカード入れがついてます。&lt;/p&gt;
+
+&lt;p&gt;いつ役にたつんだよ！だなんてお、思ってましたが、SDカードを入れておくのに割りと便利であることに気が付きました。&lt;/p&gt;
+
+&lt;p&gt;かなり特異なケースですが、僕のケータイはSDを挿しっぱなしにしてると不具合に見舞われることが多いので、必要なときにだけSDカードを使ってます。&lt;/p&gt;
+
+&lt;p&gt;なので、地味にSIMカード入れが便利。&lt;/p&gt;
+
+&lt;p&gt;もちろん、海外旅行に行くときは普通に日本のSIMを入れておくスペースとして重宝します。&lt;/p&gt;
+
+&lt;h1 id=&quot;パスポートも入る財布にも注目&quot;&gt;パスポートも入る財布にも注目&lt;/h1&gt;
+
+&lt;p&gt;1年以上使ってみて、特に壊れたり、ほつれたりすることもなく、むしろ革の色合いも良くなっていって、愛おしくなってきたこの財布。&lt;/p&gt;
+
+&lt;p&gt;次は　&lt;a href=&quot;http://bellroy.com/wallets/travel-wallet?color=charcoal&quot;&gt;パスポートも入る財布&lt;/a&gt; を買ってみたいですね。&lt;/p&gt;
+
+&lt;p&gt;旅行にいく時にいつもパスポートの置き場に困るし、飛行機の中でパスポートの出し入れするのが面倒。。ということも経験としてよくあるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;もうちょっとしたら、買ってみよう。&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">バイナリオプション 2016/02/01-07</title><link href="http://localhost:4000/fx/highlow/2016/02/07/highlow.html" rel="alternate" type="text/html" title="バイナリオプション 2016/02/01-07" /><published>2016-02-07T21:30:08+09:00</published><updated>2016-02-07T21:30:08+09:00</updated><id>http://localhost:4000/fx/highlow/2016/02/07/highlow</id><content type="html" xml:base="http://localhost:4000/fx/highlow/2016/02/07/highlow.html">&lt;h1 id=&quot;バイナリーオプションを初めてみた&quot;&gt;バイナリーオプションを初めてみた。&lt;/h1&gt;
+
+&lt;p&gt;まだ社会人になりたてのころ、FXにはまっていた時期があったので、バイナリーオプションという存在についても、知ってはいました。&lt;/p&gt;
+
+&lt;p&gt;当初はあまり興味がなかったし、興味のないまま、FXごとやらなくなってしまったのですが、最近また周りの人にバイナリーオプションをやっている人が現れて、なるほど試してみるか。という運びになりました。&lt;/p&gt;
+
+&lt;h2 id=&quot;今よりもn分後に相場が上がるか下がるか&quot;&gt;「今よりもn分後に相場が上がるか、下がるか。」&lt;/h2&gt;
+
+&lt;p&gt;言ってしまえば、バイナリーオプションは今この瞬間の相場よりもn分後に上がるか、下がるかを当てる丁半ゲームに近いです。&lt;/p&gt;
+
+&lt;p&gt;ただ、丁半ゲームと違うのはある程度予想ができることでしょうか。&lt;/p&gt;
+
+&lt;p&gt;テクニカルな指標を読めたり、世の中の経済の動きに敏感な人は、多少その50%の勝つ確率を高めることができます。&lt;/p&gt;
+
+&lt;h1 id=&quot;定期的に報告してみる&quot;&gt;定期的に報告してみる&lt;/h1&gt;
+
+&lt;p&gt;このバイナリーオプションに飽きるまで、定期的に成果を報告してみるのも面白いかなと思いまして、記事にしてみました。&lt;/p&gt;
+
+&lt;h2 id=&quot;20160201-07&quot;&gt;2016/0201-07&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160207_highlow/highlow.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(取引番号、バレてもあまり被害なさそうだけど、とりあえず消してます。)&lt;/p&gt;
+
+&lt;p&gt;お試しということもあって、口座に5000円を入れてみました。&lt;/p&gt;
+
+&lt;p&gt;取引をするために使えるキャッシュバックが5000円つくのですが、タダでもらえるお金に気持ちが入っていくこともなく、一瞬でキャッシュバック分は消滅。&lt;/p&gt;
+
+&lt;p&gt;その後、よくないな。ということで、メンタルセットを整えたうえで、取引開始 &amp;amp; スクリーンショットを撮るようにしてみました。&lt;/p&gt;
+
+&lt;p&gt;スクリーンショットの時系列は、左上、右上、左下という順番になります。&lt;/p&gt;
+
+&lt;p&gt;デモトレードもやったりしているのですが、載せているものはすべてデモではなく、本番の取引になります。&lt;/p&gt;
+
+&lt;p&gt;いっぱい書きたいこともあるけど、またおいおいということで。&lt;/p&gt;
+
+&lt;p&gt;今週も時間があれば、取引 &amp;amp; レポートをしてみようと思います。&lt;/p&gt;</content><summary type="html">バイナリーオプションを初めてみた。</summary></entry><entry><title type="html">zenfone5 のOSを5.0(Lolipop)にアップグレードする</title><link href="http://localhost:4000/android/zenfone/2016/01/30/zenfone5-lolipop.html" rel="alternate" type="text/html" title="zenfone5 のOSを5.0(Lolipop)にアップグレードする" /><published>2016-01-30T16:22:04+09:00</published><updated>2016-01-30T16:22:04+09:00</updated><id>http://localhost:4000/android/zenfone/2016/01/30/zenfone5-lolipop</id><content type="html" xml:base="http://localhost:4000/android/zenfone/2016/01/30/zenfone5-lolipop.html">&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160130_zenfone5/lolipop.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;zenfone5-のosアップデートは手動でやらないといけない&quot;&gt;zenfone5 のOSアップデートは手動でやらないといけない&lt;/h1&gt;
+
+&lt;p&gt;本国台湾でzenfone5 のOSアップデートが2015年10月ごろに配信され始め、まだかまだかとケータイの「システム更新」を押し続けていたのですが、&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;一向にアップデートが配信されない！！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;もう Kitkat のまま使い続けなければいけないのかな。。格安スマホだからしかたがないかな。。と諦めてました。&lt;/p&gt;
+
+&lt;p&gt;が、最近になってまた調べてみると手動によるOSアップデートの方法は用意されていることを発見しました！&lt;/p&gt;
+
+&lt;h1 id=&quot;いざアップデート&quot;&gt;いざアップデート！&lt;/h1&gt;
+
+&lt;p&gt;今更ですが、この記事中に出てくるzenfone5は型番 A500KL のことを指します。&lt;/p&gt;
+
+&lt;h2 id=&quot;忘れちゃいけないバックアップ&quot;&gt;忘れちゃいけないバックアップ&lt;/h2&gt;
+
+&lt;p&gt;あまり無いケースかと思いますが、バックアップが失敗してしまったときに、現状を復元できるよう、バックアップをPCやSDカードにとっておきましょう。&lt;/p&gt;
+
+&lt;h2 id=&quot;microsdカードを装着&quot;&gt;microSDカードを装着&lt;/h2&gt;
+
+&lt;p&gt;microSD カードを挿してケータイを利用していない方は、まず microSDカードを挿しましょう。&lt;/p&gt;
+
+&lt;p&gt;アップデート用のファイルはカードにおいておく必要があります。&lt;/p&gt;
+
+&lt;h2 id=&quot;アップデート用ファイルをダウンロード&quot;&gt;アップデート用ファイルをダウンロード&lt;/h2&gt;
+
+&lt;p&gt;以下のサイトから、ファイルをダウンロードしてきます。&lt;/p&gt;
+
+&lt;p&gt;http://www.asus.com/jp/Phones/ZenFone_5_A500KL/HelpDesk_Download/&lt;/p&gt;
+
+&lt;p&gt;OSはAndroid を選択し、すこし下の方に下るとある&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160130_zenfone5/zenfone.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;が新しいOSバージョンへのアップデートファイルです。&lt;/p&gt;
+
+&lt;p&gt;スマホから直接ダウンロードするでもいいですし、一度PCでダウンロードして、USB接続をしてケータイに転送するのもまた良いです。&lt;/p&gt;
+
+&lt;p&gt;いずれにせよ、ダウンロードが終わったファイルは &lt;strong&gt;解凍せずに、microSD カードの一番上のフォルダ階層においておきましょう&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;端末を再起動する&quot;&gt;端末を再起動する&lt;/h2&gt;
+
+&lt;p&gt;ファイルのダウンロードとSDカードへの配置が終わったら、端末の再起動をします。&lt;/p&gt;
+
+&lt;p&gt;再起動が終わり、しばらくすると、OSをアップデートしますか？というメッセージが出てくるので、 OKを選び、ひたすら進んでいきます。&lt;/p&gt;
+
+&lt;p&gt;しばらく放置していると、OSのアップデートが完了します！かんたん！&lt;/p&gt;
+
+&lt;h1 id=&quot;lolipopにしてよかったことよくなかったこと&quot;&gt;Lolipopにしてよかったこと、よくなかったこと&lt;/h1&gt;
+
+&lt;p&gt;現在のOSの最新バージョンは 6.0 (Marshmallow) ですが、なるべく最新にあげておくことで、使えるアプリが増えたり、動作が安定することが期待できます。&lt;/p&gt;
+
+&lt;p&gt;個人的には心持ち、動作も軽量になった気がしますし、ロック中の画面が充実したと思います。&lt;/p&gt;
+
+&lt;p&gt;またステータスバー周りもかなり簡素な表現になり、ごちゃごちゃしたアイコンが並ぶのが嫌いな僕としては、アップデートはメリットのほうが大きかったように思います。&lt;/p&gt;
+
+&lt;p&gt;デメリットとしては、プリインストールのアプリが地味に増えていいること。。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;トリップアドバイザー&lt;/li&gt;
+  &lt;li&gt;メモリ・ストレージ節約アプリ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;などなどが問答無用で入っており、ストレージの僅かなスペースを専有します。&lt;/p&gt;
+
+&lt;p&gt;アンインストールすれば済む話ではありますが、少し手間ではある。といったところでしょうか。&lt;/p&gt;
+
+&lt;p&gt;ともあれ、非常に簡単にアップデートできますし、zenfone5 をお使いの方はアップデートしておくことをオススメしたいです。&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">zenfone5 のディスプレイを交換した</title><link href="http://localhost:4000/android/zenfone/2016/01/29/zenfone5.html" rel="alternate" type="text/html" title="zenfone5 のディスプレイを交換した" /><published>2016-01-29T22:24:10+09:00</published><updated>2016-01-29T22:24:10+09:00</updated><id>http://localhost:4000/android/zenfone/2016/01/29/zenfone5</id><content type="html" xml:base="http://localhost:4000/android/zenfone/2016/01/29/zenfone5.html">&lt;h1 id=&quot;zenfone5のディスプレイが割れてしまった&quot;&gt;zenfone5のディスプレイが割れてしまった…&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://skim.milk200.cc/20160129_zenfone5/IMG_2868.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;格安Androidとして知られていた zenfone5 を買ってから1年も絶たずして、ディスプレイを割ってしまいました。&lt;/p&gt;
+
+&lt;p&gt;ケースもつけず、保護シールもつけない、素のままの使い方が好きだったので、割れてしまったときも完全にノーガードでした。&lt;/p&gt;
+
+&lt;p&gt;格安だから買ったケータイであって、また他のケータイを買いなおすものちょっと嫌だな。。&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;zenfone2高いし&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;だなんて、思いながら調べていると、どうやらzenfone5 のディスプレイは思っていたよりも簡単に交換できるらしいことがわかりました。&lt;/p&gt;
+
+&lt;p&gt;割れてしまったディスプレイで使い続けるのも苦だし、新しいケータイに買い換えないで済むならそれが何より。&lt;/p&gt;
+
+&lt;p&gt;ということで、ディスプレイ交換をやってみました。&lt;/p&gt;
+
+&lt;h1 id=&quot;必要なモノ&quot;&gt;必要なモノ&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.co.jp/gp/product/B00MYT1FE0/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00MYT1FE0&amp;amp;linkCode=as2&amp;amp;tag=tanukiti_blog-22&quot;&gt;SKILIWAH®　Asus Zenfone 5修理用 ＬＣＤ液晶ディスプレイスクリーン＋タッチガラスデジタイザーパネル 修理用キット ブラック&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=tanukiti_blog-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B00MYT1FE0&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.co.jp/gp/product/B0026RCEWC/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B0026RCEWC&amp;amp;linkCode=as2&amp;amp;tag=tanukiti_blog-22&quot;&gt;ニトムズ はがせる両面テープ 強力接着用 15mm×10m T3830&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=tanukiti_blog-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B0026RCEWC&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.co.jp/gp/product/B00LZ0GBOI/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00LZ0GBOI&amp;amp;linkCode=as2&amp;amp;tag=tanukiti_blog-22&quot;&gt;iPhone5用工具 分解修理・交換修理用ツールキット 星型ドライバー 工具 ７点セット iPhone4/iPhone4S/iPhone5/iPod　対応&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=tanukiti_blog-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B00LZ0GBOI&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;僕が購入した時にはディスプレイは3000円ほど。この価格で交換できたら申し分ないですね。&lt;/p&gt;
+
+&lt;p&gt;両面テープは、ディスプレイを交換する際に新しいディスプレイと本体をつなぐためにどうしても必要になります。&lt;/p&gt;
+
+&lt;p&gt;もう割らないと心に誓うなら、正直接着剤とかでくっつけてしまっても良いような気はしました。&lt;/p&gt;
+
+&lt;p&gt;ツールキットに関しては、あると便利。といったところでしょうか。特に付属の吸盤は、ディスプレイを外すときにだいぶ役立ちました。&lt;/p&gt;
+
+&lt;h1 id=&quot;作業開始&quot;&gt;作業開始！&lt;/h1&gt;
+
+&lt;p&gt;交換作業自体はこちらのサイトにかなりお世話になりました。&lt;/p&gt;
+
+&lt;p&gt;http://www.magarisugi.net/pc/zenfone/post-2440/&lt;/p&gt;
+
+&lt;p&gt;この記事では、僕が詰まったところを書いていこうと思います。&lt;/p&gt;
+
+&lt;h2 id=&quot;4番のケーブルが全然抜ける気配がない&quot;&gt;4番のケーブルが全然抜ける気配がない&lt;/h2&gt;
+
+&lt;p&gt;上記のサイトで説明されている④のケーブルですが、僕のケータイでは、繊細な作業をしながらそのケーブルを抜くのは最終的に難しく、断念しました。&lt;/p&gt;
+
+&lt;p&gt;その代わり④のケーブルはストッパーだけ外しておき、その他のケーブルはすべて抜き取り、基盤を取り外すときに一緒に抜く形にしました。&lt;/p&gt;
+
+&lt;p&gt;この方法でかなり楽に抜けました。&lt;/p&gt;
+
+&lt;h2 id=&quot;3番ケーブルは雑に扱っても大丈夫だった&quot;&gt;3番ケーブルは雑に扱っても大丈夫だった&lt;/h2&gt;
+
+&lt;p&gt;①と③のケーブルは交換対象であるディスプレイに接続されているため、万が一ちぎれたりしても、交換することになるので大丈夫。&lt;/p&gt;
+
+&lt;p&gt;あんまり気を張り詰めて交換することはなかったなーとあとから思いました。&lt;/p&gt;
+
+&lt;h2 id=&quot;ドライヤーでディスプレイをしっかりと温めた後かなり力を込めてはがず必要がある&quot;&gt;ドライヤーでディスプレイをしっかりと温めた後、かなり力を込めてはがず必要がある&lt;/h2&gt;
+
+&lt;p&gt;電池まで温めすぎてしまって破裂。。なんてことは避けたかったので、僕はゆっくりディスプレイを温めていました。&lt;/p&gt;
+
+&lt;p&gt;ところが、一向に接着がゆるくなることはなく、よくよく温めたところから強引にツールを差し込み、引き剥がす必要がありました。&lt;/p&gt;
+
+&lt;p&gt;少し痛々しい作業にはなりますが、ディスプレイがきれいになるんだから致し方無し。。&lt;/p&gt;
+
+&lt;h2 id=&quot;交換完了後タッチ位置がずれることがある&quot;&gt;交換完了後、タッチ位置がずれることがある&lt;/h2&gt;
+
+&lt;p&gt;きれいに交換が終わって、快適な環境を手に入れた！と思いきや、僕の場合、端末のタッチ位置が画面の下の方にいくに連れ、大きくずれてしまう現象に遭遇しました。&lt;/p&gt;
+
+&lt;p&gt;一瞬諦めかけたのですが、端末を再起動したら、直りましたｗ ナンデ。。。&lt;/p&gt;
+
+&lt;p&gt;移行、デバッグモードにしてタッチ位置を見ていますが、以降一度もずれておらず、快適に使えています。&lt;/p&gt;
+
+&lt;h1 id=&quot;もう二度と割りたくない&quot;&gt;もう二度と割りたくない&lt;/h1&gt;
+
+&lt;p&gt;修理自体は想定よりかなり安く済んだものの、繊細な作業と緊張感はあまり味わいたくないものです。&lt;/p&gt;
+
+&lt;p&gt;おまけに、両面テープでディスプレイを貼り付けているので、また自分で引き剥がす作業は苦労を想像するに難くないです。&lt;/p&gt;
+
+&lt;p&gt;ということで、修理が無事完了したところで、画面保護シールとケースを買いましたｗ&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.co.jp/gp/product/B00PH8ER2M/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00PH8ER2M&amp;amp;linkCode=as2&amp;amp;tag=tanukiti_blog-22&quot;&gt;ASUS ZenFone 5 (A500KL) 国産ガラス採用 強化ガラス製 液晶保護フィルム ガラスフィルム 厚さ0.33mm 2.5D 硬度9H ラウンドエッジ加工 エイスース on-device 【国内正規流通品】&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=tanukiti_blog-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B00PH8ER2M&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.co.jp/gp/product/B00PORKTBO/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00PORKTBO&amp;amp;linkCode=as2&amp;amp;tag=tanukiti_blog-22&quot;&gt;ASUS ZenFone5 専用ケース クリア ハード シェルカバー ( 透明 ) [ ポリカーボネート製 高透明性・耐衝撃性・耐傷性 ]&lt;/a&gt;&lt;img src=&quot;http://ir-jp.amazon-adsystem.com/e/ir?t=tanukiti_blog-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B00PORKTBO&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;修理後のディスプレイは指の滑りにやや引っかかりがあり、微妙感もあったのですが、保護シールを貼ることで、かなりスムーズに操作できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;ケースについては、まさかのまさかの自体を避けるために購入。。 ディスプレイが割れないようにするなら、これもまたいいかな。&lt;/p&gt;
+
+&lt;p&gt;皆様もぜひ割ってしまった時には、自分で修理をお試しあれ〜。&lt;/p&gt;</content><summary type="html">zenfone5のディスプレイが割れてしまった…</summary></entry></feed>
