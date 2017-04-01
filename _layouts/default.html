@@ -2,29 +2,40 @@
 <html>
   <head>
   <title>{{ site.title }}</title>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="{{ site.author.name }}">
-  {% if page.excerpt %}
-  <meta name="description" content="{{ page.description }}">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="{{ site.author.name }}"/>
+
+  {% if page.excerpt == nil %}
+  <meta name="description" content="{{ site.description }}" />
   {% else %}
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="{{ page.description }}" />
   {% endif %}
+
+  <meta name="keywords" content="{{ site.keywords }}" />
   <meta http-equiv="content-language" content="{{ site.locale }}" />
-  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}"/>
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
 
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/assets/images/touch-icon.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-
-    {% feed_meta %}
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" href="/assets/images/touch-icon.png" sizes="192x192"/>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png"/>
+  {% feed_meta %}
 
   </head>
 
   <body id="top">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=196546304172480";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <header id="header">
       <a href="{{ site.url }}" class="image avatar"><img class="editable" src="/assets/images/avatar.jpg" alt="{{ site.author.name }}"></a>
       <h1 class="editable"><strong>I am <a href="/">Strata Reloaded</a></strong>, a super simple<br>
@@ -65,7 +76,7 @@
         {% endif %}
       </ul>
       <ul class="copyright">
-          <li>&copy; Untitled</li>
+          <li>&copy; tanukiti1987</li>
           <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
           <li>Theme: <a href="http://comfusionllc.com">Comfusion LLC</a></li>
       </ul>
