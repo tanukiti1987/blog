@@ -35,21 +35,33 @@
     {{ content }}
 
     <footer id="footer">
-      <p class="editor-link"><a href="cloudcannon:collections/_data/social.yml" class="button"><strong>&#9998;</strong> Update Social Icons</a></p>
       <ul class="icons">
-        {% for account in site.data.social %}
-  <li>
-  <a {% if account.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=account.link %}" {% if account.social_icon %}class="icon fa-{{ account.social_icon | slugify }}"{% endif %}>
-              <span class="label">{{ account.name }}</span>
-  </a>
-  </li>
-  {% endfor %}
-        {% if site.author.email %}
-        <li>
-          <a href="mailto:{{ site.author.email }}" class="icon fa-envelope-o">
-            <span class="label">Email</span>
-          </a>
-        </li>
+        {% if site.github_username %}
+        <li><a href="https://github.com/{{ site.github_username }}" class="icon fa-github" target="_blank" ><span class="label">Github</span></a></li>
+        {% endif %}
+        {% if site.twitter_username %}
+        <li><a href="https://twitter.com/{{ site.twitter_username }}" class="icon fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+        {% endif %}
+        {% if site.facebook_username %}
+        <li><a href="https://www.facebook.com/{{ site.facebook_username }}" class="icon fa-facebook" target="_blank" ><span class="label">Facebook</span></a></li>
+        {% endif %}
+        {% if site.linkedin_username %}
+        <li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="icon fa-linkedin" target="_blank" ><span class="label">Linkedin</span></a></li>
+        {% endif %}
+        {% if site.instagram_username %}
+        <li><a href="https://www.instagram.com/{{ site.instagram_username }}" class="icon fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+        {% endif %}
+        {% if site.pinterest_username %}
+        <li><a href="https://pinterest.com/{{ site.pinterest_username }}" class="icon fa-pinterest" target="_blank" ><span class="label">Pinterest</span></a></li>
+        {% endif %}
+        {% if site.flickr_username %}
+        <li><a href="https://www.flickr.com/photos/{{ site.flickr_username }}" class="icon fa-flickr" target="_blank" ><span class="label">Flickr</span></a></li>
+        {% endif %}
+        {% if site.email %}
+        <li><a href="mailto:{{ site.email }}" class="icon fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+        {% endif %}
+        {% if site.feed_icon %}
+        <li><a href="{{ site.feed.path }}" class="icon fa-rss" target="_blank" ><span class="label">Feed</span></a></li>
         {% endif %}
       </ul>
       <ul class="copyright">
