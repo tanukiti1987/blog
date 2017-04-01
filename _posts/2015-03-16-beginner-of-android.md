@@ -2,8 +2,7 @@
 layout: post
 title: "Android アプリ作りをなめちゃいかん"
 date: 2015-03-16 01:12:37 +0900
-comments: true
-categories: [android]
+tags: android
 ---
 # Hello, Android
 

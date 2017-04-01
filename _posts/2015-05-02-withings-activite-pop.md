@@ -2,8 +2,7 @@
 layout: post
 title: "AppleWatchよりも、Withings Activité Popのすゝめ"
 date: 2015-05-02 22:37:16 +0900
-comments: true
-categories: [withings]
+tags: withings
 ---
 
 ![](https://skim.milk200.cc/20150502_withings/Withings_Activite%CC%81+Pop.jpg)

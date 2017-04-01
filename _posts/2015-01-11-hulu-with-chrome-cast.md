@@ -2,8 +2,7 @@
 layout: post
 title: "ChomeCast で hulu 三昧"
 date: 2015-01-11 22:31:52 +0900
-comments: true
-categories: [hulu, chromecast]
+tags: hulu chromecast
 ---
 
 ![](https://skim.milk200.cc/20150111_hulu/hulu.png)

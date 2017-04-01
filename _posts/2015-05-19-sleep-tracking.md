@@ -2,8 +2,7 @@
 layout: post
 title: "着けてることを意識しないウェアラブルデバイスの良さ"
 date: 2015-05-19 22:56:43 +0900
-comments: true
-categories: withings
+tags: withings
 ---
 
 # 飽きないウェアラブルデバイス

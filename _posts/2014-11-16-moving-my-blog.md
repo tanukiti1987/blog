@@ -2,8 +2,7 @@
 layout: post
 title: "ブログを引っ越してみた"
 date: 2014-11-16 09:11:38 +0900
-comments: false
-categories: [diary]
+tags: diary
 ---
 
 ずっとやってこなかったんだけど、自分のブログは自分のドメインを作って、運用しようと思い、引越作業をしてみました。

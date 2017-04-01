@@ -2,8 +2,7 @@
 layout: post
 title: "content_for_once というgemをリリースしました"
 date: 2016-04-09 21:35:29 +0900
-comments: true
-categories: ["ruby", "gem"]
+tags: ruby gem
 ---
 
 Railsで、viewファイルに対して、`javascript_include_tag` や `stylesheet_link_tag` を多重に読み込んでしまうような書き方をしてしまうことって、ありますよね。

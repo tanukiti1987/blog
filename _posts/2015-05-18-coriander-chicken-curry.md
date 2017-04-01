@@ -2,8 +2,7 @@
 layout: post
 title: "会社で作ったコリアンダーチキンカレーが最強に旨かった"
 date: 2015-05-18 22:41:10 +0900
-comments: true
-categories: [diary, curry, food]
+tags: diary curry
 ---
 
 ![](https://skim.milk200.cc/20150518_coriander/coriander_chicken_curry.jpg)

@@ -2,8 +2,7 @@
 layout: post
 title: "色めがねを外す練習をしてみる"
 date: 2015-05-20 22:45:19 +0900
-comments: true
-categories: 心構え
+tags: diary
 ---
 
 知らないうちに、かけてしまっている色めがね。

@@ -2,8 +2,7 @@
 layout: post
 title: "オライリーの「ヘルシープログラマ」の発売イベントでLTしてきました"
 date: 2015-08-26 00:08:44 +0900
-comments: true
-categories: ["event", "LT"]
+tags: diary
 ---
 
 # You are what you eat!

@@ -2,8 +2,7 @@
 layout: post
 title: "原宿の穴場カフェ ~オリエンタルレシピカフェ~"
 date: 2015-01-26 21:42:26 +0900
-comments: true
-categories: cafe
+tags: cafe
 ---
 
 <a href="https://www.flickr.com/photos/amanda28192/6216031916" title="Coffee Beans by Amanda, on Flickr"><img src="https://farm7.staticflickr.com/6038/6216031916_3fe1b29b3f_z.jpg" alt="Coffee Beans"></a>

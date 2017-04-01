@@ -2,8 +2,7 @@
 layout: post
 title: "colorful-cursor というatom package をリリースしました"
 date: 2016-01-03 01:00:00 +0900
-comments: true
-categories: ["atom"]
+tags: atom
 ---
 
 ![](https://skim.milk200.cc/20160103_colorful_cursor/colorful-cursor.gif)

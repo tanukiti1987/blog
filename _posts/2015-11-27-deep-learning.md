@@ -2,8 +2,7 @@
 layout: post
 title: "「人工知能は人間を超えるか 」を読んでようやくディープラーニングの意味がわかった"
 date: 2015-11-27 00:20:00 +0900
-comments: true
-categories: "reading"
+tags: book
 ---
 
 # ディープラーニングってよく聞く言葉だけど、何がすごいかよくわからなかった

@@ -2,8 +2,7 @@
 layout: post
 title: "[huluのススメ] 冷たい熱帯魚"
 date: 2015-01-19 23:52:26 +0900
-comments: true
-categories: [hulu, movie]
+tags: hulu movie
 ---
 
 ![](https://skim.milk200.cc/20150119_coldfish/cold_fish.jpg)

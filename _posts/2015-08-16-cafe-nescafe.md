@@ -2,8 +2,7 @@
 layout: post
 title: "原宿の穴場カフェ ~カフェネスカフェ~"
 date: 2015-08-16 17:39:00 +0900
-comments: true
-categories: "cafe"
+tags: cafe
 ---
 
 ![](

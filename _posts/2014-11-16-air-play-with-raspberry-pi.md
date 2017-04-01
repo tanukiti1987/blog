@@ -2,8 +2,7 @@
 layout: post
 title: "raspberryPiでAirPlay"
 date: 2014-11-16 18:16:07 +0900
-comments: true
-categories: [raspberryPi]
+categories: raspberryPi
 ---
 
 ![raspberryPi](https://skim.milk200.cc/20141116_raspberrypi/raspberryPi.jpg)

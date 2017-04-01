@@ -2,8 +2,7 @@
 layout: post
 title: "zenfone5 のOSを5.0(Lolipop)にアップグレードする"
 date: 2016-01-30 16:22:04 +0900
-comments: true
-categories: ["android", "zenfone"]
+tags: android zenfone
 ---
 
 ![](
