@@ -34,9 +34,7 @@ microSD カードを挿してケータイを利用していない方は、まず
 
 ## アップデート用ファイルをダウンロード
 
-以下のサイトから、ファイルをダウンロードしてきます。
-
-http://www.asus.com/jp/Phones/ZenFone_5_A500KL/HelpDesk_Download/
+以下の[公式サイト](http://www.asus.com/jp/Phones/ZenFone_5_A500KL/HelpDesk_Download/)から、ファイルをダウンロードしてきます。
 
 OSはAndroid を選択し、すこし下の方に下るとある
 
