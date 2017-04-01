@@ -3,7 +3,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: rescue => MissingNutrient::vitaminE
+title: rescue => MissingNutrient::VitaminE
 author:
   name: tanukiti1987
 description: Tech関連では Ruby, Rails, Android, Arduino のことを書いていたり、気になったガジェットについて書いたり、読んだ本について書いたりしています。
