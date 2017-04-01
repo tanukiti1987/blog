@@ -16,4 +16,12 @@
   .fb_iframe_widget > span {
     vertical-align: baseline !important;
   }
+
+  section.pagination {
+    text-align: center;
+
+    span {
+      margin: 0 20px;
+    }
+  }
 }
