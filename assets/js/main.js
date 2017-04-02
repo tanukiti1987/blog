@@ -127,9 +127,6 @@
 						usePopupNav: true,
 						windowMargin: (skel.breakpoint('small').active ? 0 : 50)
 					});
-
 				});
-
 	});
-
 })(jQuery);
