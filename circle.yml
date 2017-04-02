@@ -6,15 +6,19 @@ dependencies:
   cache_directories:
     - 'vendor/bundle'
   override:
+    - sudo pip install awscli
     - gem install bundler
     - bundle -j8 --path=vendor/bundle
 
 test:
   override:
-    - bundle exec jekyll build
+    - echo "no tests"
 
 deployment:
   production:
     branch: master
     commands:
+      - bundle exec jekyll build
       - bundle exec s3_website push
+      - aws configure set preview.cloudfront true
+      - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
