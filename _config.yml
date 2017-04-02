@@ -11,7 +11,7 @@ keywords: tanukiti1987,ブログ,ruby,android,ios,iphone,zenfone
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://banana.milk200.cc"
-permalink: /blog/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title.html
 twitter_username: tanukiti1987
 github_username: tanukiti1987
 paginate_path: "/page/:num/"
@@ -20,7 +20,6 @@ paginate: 5
 # For tags
 tag_page_layout: tag_page
 tag_page_dir: blog/tag
-tag_permalink_style: pretty
 
 feed:
   path: atom.xml

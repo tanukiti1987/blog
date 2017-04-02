@@ -9,7 +9,7 @@ layout: default
           <p>
             <span>
               <i class="fa fa-calendar"></i>{{ post.date | date: "%d %B %Y" }}
-              {% if post.tags %} on <i class="fa fa-tags"></i> {% for tag in post.tags %}<a class='tags' href="/blog/tag/{{ tag }}">{{ tag }}</a>{% endfor %}{% endif %}</span>
+              {% if post.tags %} on <i class="fa fa-tags"></i> {% for tag in post.tags %}<a class='tags' href="/blog/tag/{{ tag }}.html">{{ tag }}</a>{% endfor %}{% endif %}</span>
           </p>
         </header>
         <section>
