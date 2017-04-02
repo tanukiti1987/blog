@@ -43,5 +43,6 @@ gems:
   - jekyll-feed
   - jekyll-paginate
 exclude:
+  - vendor
   - Gemfile
   - Gemfile.lock
