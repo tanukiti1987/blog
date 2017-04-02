@@ -46,3 +46,5 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - circle.yml
+  - README.md
