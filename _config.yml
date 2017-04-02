@@ -10,7 +10,7 @@ description: Tech関連では Ruby, Rails, Android, Arduino のことを書い�
 keywords: tanukiti1987,ブログ,ruby,android,ios,iphone,zenfone
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://banana.milk200.cc"
+url: "https://almond.milk200.cc"
 permalink: /blog/:year/:month/:day/:title.html
 twitter_username: tanukiti1987
 github_username: tanukiti1987
