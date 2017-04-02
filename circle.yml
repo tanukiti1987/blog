@@ -1,0 +1,15 @@
+machine:
+  ruby:
+    version: '2.4'
+
+dependencies:
+  cache_directories:
+    - 'vendor/bundle'
+  override:
+    - bundle -j8 --path=vendor/bundle
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - bundle exec s3_website push
