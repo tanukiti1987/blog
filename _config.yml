@@ -24,6 +24,7 @@ tag_page_dir: blog/tag
 feed:
   path: atom.xml
 
+google_analytics_key: UA-27693816-5
 facebook_username: ryusuke.sekiguchi
 twitter_username: tanukiti1987
 linkedin_username: ryusuke-sekiguchi-778876117
