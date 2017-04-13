@@ -20,6 +20,8 @@ paginate: 5
 # For tags
 tag_page_layout: tag_page
 tag_page_dir: blog/tag
+tag_page_data:
+  sitemap: false
 
 feed:
   path: atom.xml
