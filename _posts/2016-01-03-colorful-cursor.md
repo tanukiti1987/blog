@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "colorful-cursor というatom package をリリースしました"
+title: colorful-cursor というatom package をリリースしました
 date: 2016-01-03 01:00:00 +0900
 tags: atom
+description: atom のpackage を何か作ってみたくて、colorful-cursor というのを作ってみました。プログラミング中にカーソルの色がどんどん変わっていく拡張をするための package です。 その package を作るがてら、苦労したところなどをまとめています。
 ---
 
 ![](https://skim.milk200.cc/20160103_colorful_cursor/colorful-cursor.gif)

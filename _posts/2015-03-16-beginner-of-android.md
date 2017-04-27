@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Android アプリ作りをなめちゃいかん"
+title: Android アプリ作りをなめちゃいかん
 date: 2015-03-16 01:12:37 +0900
 tags: android
+description: iOS でアプリを作ったことがあったので、Androidのアプリづくりはなんとかなるだろうと思っていたんですが、思いのほか、前途多難な滑り出しでメンタル弱ってきたので、そのこころをブログにしました。
 ---
 # Hello, Android
 

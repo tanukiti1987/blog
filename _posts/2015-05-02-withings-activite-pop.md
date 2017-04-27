@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "AppleWatchよりも、Withings Activité Popのすゝめ"
+title: AppleWatchよりも、Withings Activité Popのすゝめ
 date: 2015-05-02 22:37:16 +0900
 tags: withings
+description: AppleWatchで賑わってますね！ そんな中、僕が紹介するのは Withings の Activite Pop という腕時計です。 電池持ち最高！睡眠状況もウォッチできる！こんないい時計、なかなかないんじゃないでしょうか。
 ---
 
 ![](https://skim.milk200.cc/20150502_withings/Withings_Activite%CC%81+Pop.jpg)
