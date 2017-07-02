@@ -1,7 +1,7 @@
 defaults: &defaults
   docker:
     - image: tanukiti1987/blog-base:0.1
-  working_directory: /home/ubuntu/blog
+  working_directory: ~/blog
   environment:
     TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 
@@ -27,12 +27,8 @@ jobs:
       - run:
           name: jekyll build
           command: JEKYLL_ENV=production bundle exec jekyll build
-
-  build-and-deploy:
+  deploy:
     <<: *defaults
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - restore_cache:
@@ -59,3 +55,15 @@ jobs:
           command: |
             aws configure set preview.cloudfront true
             aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
