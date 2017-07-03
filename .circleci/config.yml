@@ -1,7 +1,7 @@
 defaults: &defaults
   docker:
     - image: tanukiti1987/blog-base:0.1
-  working_directory: ~/blog
+  working_directory: /root/blog
   environment:
     TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 
@@ -23,30 +23,18 @@ jobs:
               bundle -j8 --path=vendor/bundle
       - save_cache:
           key: bundle-{{ checksum "Gemfile.lock" }}
-          paths: vendor/bundle
+          paths: /root/blog/vendor/bundle
       - run:
           name: jekyll build
           command: JEKYLL_ENV=production bundle exec jekyll build
+      - persist_to_workspace:
+          root: /root/blog
+          paths: .
   deploy:
     <<: *defaults
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - bundle-{{ checksum "Gemfile.lock" }}
-            # if cache for exact version of `Gemfile` is not present then load any most recent one
-            - bundle
-      - run:
-          name: bundle install
-          command: |
-              gem update bundler
-              bundle -j8 --path=vendor/bundle
-      - save_cache:
-          key: bundle-{{ checksum "Gemfile.lock" }}
-          paths: vendor/bundle
-      - run:
-          name: jekyll build
-          command: JEKYLL_ENV=production bundle exec jekyll build
+      - attach_workspace:
+        at: /root/blog
       - run:
           name: sync to s3
           command: bundle exec s3_website push
