@@ -28,13 +28,18 @@ jobs:
           name: jekyll build
           command: JEKYLL_ENV=production bundle exec jekyll build
       - persist_to_workspace:
-          root: /root/blog
-          paths: .
+          root: /root
+          paths: blog
   deploy:
     <<: *defaults
     steps:
       - attach_workspace:
-        at: /root/blog
+          at: /root
+      - run:
+          name: bundle install
+          command: |
+              gem update bundler
+              bundle -j8 --path=vendor/bundle
       - run:
           name: sync to s3
           command: bundle exec s3_website push
