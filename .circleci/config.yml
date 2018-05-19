@@ -42,12 +42,7 @@ jobs:
               bundle -j8 --path=vendor/bundle
       - run:
           name: sync to s3
-          command: bundle exec s3_website push
-      - run:
-          name: invalidate cloudfront
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
+          command: ./scripts/deploy.sh
 
 workflows:
   version: 2
