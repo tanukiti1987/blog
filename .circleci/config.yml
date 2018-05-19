@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-    - image: tanukiti1987/blog-base:0.2
+    - image: tanukiti1987/blog-base:0.1
   working_directory: /root/blog
   environment:
     TZ: "/usr/share/zoneinfo/Asia/Tokyo"
@@ -42,7 +42,12 @@ jobs:
               bundle -j8 --path=vendor/bundle
       - run:
           name: sync to s3
-          command: ./scripts/deploy.sh
+          command: bundle exec s3_website push
+      - run:
+          name: invalidate cloudfront
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
 
 workflows:
   version: 2
