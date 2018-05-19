@@ -22,7 +22,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <link rel="icon" type="image/png" href="/assets/images/touch-icon.png" sizes="192x192"/>
   <link rel="icon" type="image/png" href="/assets/images/favicon.ico"/>
-  {% feed_meta %}
 
   </head>
 
@@ -68,9 +67,6 @@
         {% endif %}
         {% if site.email %}
         <li><a href="mailto:{{ site.email }}" class="icon fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
-        {% endif %}
-        {% if site.feed_icon %}
-        <!-- <li><a href="{{ site.feed.path }}" class="icon fa-rss" target="_blank" ><span class="label">Feed</span></a></li> -->
         {% endif %}
       </ul>
       <ul class="copyright">

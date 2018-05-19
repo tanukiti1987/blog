@@ -14,17 +14,13 @@ url: "https://almond.milk200.cc"
 permalink: /blog/:year/:month/:day/:title.html
 twitter_username: tanukiti1987
 github_username: tanukiti1987
-paginate_path: "/page/:num/Index.html"
+paginate_path: "/page/:num/"
 paginate: 5
 
 # For tags
 tag_page_layout: tag_page
 tag_page_dir: blog/tag
-tag_page_data:
-  sitemap: false
-
-feed:
-  path: atom.xml
+tag_permalink_style: pretty
 
 google_analytics_key: UA-27693816-5
 facebook_username: ryusuke.sekiguchi
@@ -41,8 +37,6 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-sitemap
-  - jekyll-feed
   - jekyll-paginate
 exclude:
   - vendor
