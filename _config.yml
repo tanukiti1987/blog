@@ -14,7 +14,7 @@ url: "https://almond.milk200.cc"
 permalink: /blog/:year/:month/:day/:title.html
 twitter_username: tanukiti1987
 github_username: tanukiti1987
-paginate_path: "/page/:num/"
+paginate_path: "/page/:num/Index.html"
 paginate: 5
 
 # For tags
