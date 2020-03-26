@@ -2,7 +2,7 @@
 layout: post
 title: Info.plistの設定方法
 date: 2013-03-31 22:14:53 +0900
-tags: ruby rubymotion
+tags: ruby RubyMotion
 ---
 続けざまにRubyMotionネタ。
 
