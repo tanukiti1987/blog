@@ -5,16 +5,24 @@ permalink: /about/
 tags: about
 ---
 
-This Jekyll theme was originally crafted by [John Otander](http://johnotander.com) as [Pixyll](https://github.com/johno/pixyll) and modified by [Sai Kiran Sripada](https://www.saikiransripada.com/).
+<div style="text-align: center; margin: 20px 0;">
+<img src="/avatar.jpg" style="border-radius: 50%; width: 50%;" />
+<div class="author">Ryusuke Sekiguchi(id: tanukiti1987)</div>
+</div>
 
-Checkout the [Github repository](https://github.com/saikiransripada/mixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
 
-Thanks to the following:
+## Skill set
 
-* [Pixyll](https://github.com/johno/pixyll)
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Type Scale](http://type-scale.com/)
+* Ruby, Ruby on Rails
+* AWS
+* iOS(Objective-C, Swift)
+* Android(Java)
+* C++
+
+## Social
+
+* [GitHub](https://github.com/tanukiti1987)
+* [Twitter](https://twitter.com/tanukiti1987)
+* [Instagram](https://www.instagram.com/tanukiti1987/?hl=ja)
+* [Facebook](https://www.facebook.com/ryusuke.sekiguchi)
+* [LinkedIn](https://www.linkedin.com/in/ryusuke-sekiguchi-778876117)
