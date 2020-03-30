@@ -8,11 +8,11 @@ tags: Android
 Androidの開発をするに際して、よく使うであろうスクリーンショットの取得。
 社内の知見があったので、使ってる際の作業ログ。
 
-### 元ネタ
+#### 元ネタ
 
 http://techlife.cookpad.com/entry/2014/12/17/182050
 
-# homebrew で android-sdk をインストールする
+## homebrew で android-sdk をインストールする
 
 ```
 brew install android-sdk
@@ -20,13 +20,13 @@ brew install android-sdk
 
 コマンドラインから作業をすることも多いし、AndroidStudio経由で `android-sdk` をインストールするよりもオススメ。
 
-# スクリーンショットコマンド当たりにPATHを通す
+## スクリーンショットコマンド当たりにPATHを通す
 
 brew で sdk をインストールすると、 `/usr/local/opt/` 以下に sdk が配置されます。
 
 今回使用する `screenshot2` というコマンドは `/usr/local/opt/android-sdk/tools` 以下にあるので、お好みにもよりますが、この辺にPATHを通しておきます。
 
-# alias をはる
+## alias をはる
 
 ここまでで `screenshot2` というコマンドが使えるようになって、
 

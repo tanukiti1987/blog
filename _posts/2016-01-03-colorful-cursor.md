@@ -8,7 +8,7 @@ summary: atom のpackage を何か作ってみたくて、colorful-cursor とい
 
 ![](https://skim.milk200.cc/20160103_colorful_cursor/colorful-cursor.gif)
 
-# colorful-cursor
+## colorful-cursor
 
 atom で何か拡張書いてみたいなーということで、作ってみました。
 
@@ -22,7 +22,7 @@ package と ソースコードは以下より参照ください。
 
 [tanukiti1987/colorful-cursor (github.com)](https://github.com/tanukiti1987/colorful-cursor)
 
-## 開発の敷居
+### 開発の敷居
 
 atom の package の開発はすごく敷居が低いように感じました。
 
@@ -32,7 +32,7 @@ atom の package の開発はすごく敷居が低いように感じました。
 
 package が開発完了すれば `apm publish minor` とターミナルに撃ちこめば自動でリリースされるという手軽さ。
 
-## 苦労点もいくつか
+### 苦労点もいくつか
 
 ドキュメントについては、[こちら](https://atom.io/docs/) から参照できます。
 
@@ -42,7 +42,7 @@ package が開発完了すれば `apm publish minor` とターミナルに撃ち
 
 React も近辺の知識もがんばって勉強していかないとなーと思った次第でした。
 
-# 最後に
+## 最後に
 
 開発中は、主にプログラムを組みながら、このPackageの動きを確認していたのですが、このブログを書いていて気がついたことが一つ。
 
@@ -54,7 +54,7 @@ __日本語打ち込むと、カーソルの色が固定される！！！__
 
 すこしづつ直して、愛でていこうと思いますので、皆様もぜひ使ってみてください mm
 
-## 参考文献
+### 参考文献
 
 - [Atomパッケージを作る - ワード境界を日本語対応させるパッケージ: japanese-word-selection](http://tbd.kaitoy.xyz/2015/08/21/japanese-word-selection/)
 - [Atomのパッケージを作ってみた](http://takezoe.hatenablog.com/entry/20140823/p1)

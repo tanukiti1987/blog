@@ -7,7 +7,7 @@ categories: raspberryPi
 
 ![raspberryPi](https://skim.milk200.cc/20141116_raspberrypi/raspberryPi.jpg)
 
-# raspberryPi をひと通り楽しむ
+## raspberryPi をひと通り楽しむ
 
 会社の人からもらった raspberryPi（以下、ラズパイ）。
 正直いうと、しばらく触り始めのコストが高くて、触れてなかったんです。
@@ -23,7 +23,7 @@ categories: raspberryPi
 <!-- more -->
 
 
-# さながら格安AppleTVだ！
+## さながら格安AppleTVだ！
 
 導入はめちゃくちゃ簡単。
 

@@ -15,7 +15,7 @@ info.plist触りたいのに、ファイルが無い！無い！
 そんな時は、Rakefileを触ってあげればいいらしい。
 
 ```ruby
-# Rakefile
+## Rakefile
 Motion::Project::App.setup do |app|
   app.name = 'sample'
   app.info_plist['UIStatusBarHidden'] = true
