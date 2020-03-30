@@ -5,7 +5,7 @@
 # in the templates via {{ site.myvariable }}.
 title: rescue => MissingNutrient::VitaminE
 author: tanukiti1987
-description: Tech関連では Ruby, Rails, Android, Arduino のことを書いていたり、気になったガジェットについて書いたり、読んだ本について書いたりしています。
+summary: Tech関連では Ruby, Rails, Android, Arduino のことを書いていたり、気になったガジェットについて書いたり、読んだ本について書いたりしています。
 keywords: tanukiti1987, ブログ, ruby, android, ios, iphone, zenfone
 
 baseurl: "" # the subpath of your site, e.g. /blog
