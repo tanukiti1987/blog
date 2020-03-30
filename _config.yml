@@ -6,7 +6,7 @@
 title: rescue => MissingNutrient::VitaminE
 author: tanukiti1987
 description: Tech関連では Ruby, Rails, Android, Arduino のことを書いていたり、気になったガジェットについて書いたり、読んだ本について書いたりしています。
-keywords: tanukiti1987,ブログ,ruby,android,ios,iphone,zenfone
+keywords: tanukiti1987, ブログ, ruby, android, ios, iphone, zenfone
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://almond.milk200.cc"
@@ -41,13 +41,16 @@ show_sharing_icons: true
 # Change to 'true' to enable individual icons
 share_facebook: true
 share_twitter: true
-share_googleplus: true
-share_linkedin: true
-share_digg: true
-share_tumblr: true
-share_reddit: true
-share_stumbleupon: true
-share_hackernews: true
+share_googleplus: false
+share_linkedin: false
+share_digg: false
+share_tumblr: false
+share_reddit: false
+share_stumbleupon: false
+share_hackernews: false
+
+# Contact form ID
+formspree: xgezgove
 
 text:
   pagination:
@@ -72,6 +75,10 @@ text:
   index:
     coming_soon: 'Coming soon...'
   og_locale: 'en_US'
+  contact:
+    email: example@example.com
+    content: ご連絡いただく内容をご記入ください！
+    submit: 送信する
 
 # Build settings
 markdown: kramdown
