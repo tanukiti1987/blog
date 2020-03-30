@@ -3,7 +3,7 @@ layout: post
 title: zenfone5 のOSを5.0(Lolipop)にアップグレードする
 date: 2016-01-30 16:22:04 +0900
 tags: android zenfone
-description: zenfone5 のOS 5.0 の配信が開始されました。 OTAでは降ってこないようなので、手動でインストールして動作確認するところまでをご紹介しますよ。かんたんです。
+summary: zenfone5 のOS 5.0 の配信が開始されました。 OTAでは降ってこないようなので、手動でインストールして動作確認するところまでをご紹介しますよ。かんたんです。
 ---
 
 ![](

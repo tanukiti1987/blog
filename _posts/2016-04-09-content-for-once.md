@@ -3,7 +3,7 @@ layout: post
 title: content_for_once というgemをリリースしました
 date: 2016-04-09 21:35:29 +0900
 tags: ruby gem
-description: content_for_once という rails の plugin があったのですが、現在では gem によるライブラリの配布が一般的になってきています。 今回はその content_for_once を gem 化したことについて、使いかたを合わせてご紹介します。
+summary: content_for_once という rails の plugin があったのですが、現在では gem によるライブラリの配布が一般的になってきています。 今回はその content_for_once を gem 化したことについて、使いかたを合わせてご紹介します。
 ---
 
 Railsで、viewファイルに対して、`javascript_include_tag` や `stylesheet_link_tag` を多重に読み込んでしまうような書き方をしてしまうことって、ありますよね。
