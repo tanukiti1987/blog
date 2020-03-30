@@ -4,40 +4,95 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: rescue => MissingNutrient::VitaminE
-author:
-  name: tanukiti1987
-description: Tech関連では Ruby, Rails, Android, Arduino のことを書いていたり、気になったガジェットについて書いたり、読んだ本について書いたりしています。
-keywords: tanukiti1987,ブログ,ruby,android,ios,iphone,zenfone
+author: tanukiti1987
+summary: Tech関連では Ruby, Rails, Android, Arduino のことを書いていたり、気になったガジェットについて書いたり、読んだ本について書いたりしています。
+keywords: tanukiti1987, ブログ, ruby, android, ios, iphone, zenfone
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://almond.milk200.cc"
-permalink: /blog/:year/:month/:day/:title.html
-twitter_username: tanukiti1987
-github_username: tanukiti1987
-paginate_path: "/page/:num/"
-paginate: 5
+date_format: "%b %-d, %Y"
+# header_pages:
+#  - about.md
+#  - contact.html
 
-# For tags
-tag_page_layout: tag_page
-tag_page_dir: blog/tag
-tag_permalink_style: pretty
+google_analytics: UA-27693816-5
 
-google_analytics_key: UA-27693816-5
+# Optional features
+animated:             true
+show_related_posts:   true
+show_post_footers:    false
+show_social_icons:    true
+
+# Preview image for social media aka og:image and twitter:image
+post_preview_image: false
+
+# Disqus post comments
+disqus_shortname:
+
+# Social icons
 facebook_username: ryusuke.sekiguchi
-twitter_username: tanukiti1987
-linkedin_username: ryusuke-sekiguchi-778876117
+github_username: tanukiti1987
 instagram_username: tanukiti1987
-github_username:  tanukiti1987
-feed_icon: rss
+linkedin_username: ryusuke-sekiguchi-778876117
+twitter_username: tanukiti1987
+
+# Post sharing icons
+show_sharing_icons: true
+# Change to 'true' to enable individual icons
+share_facebook: true
+share_twitter: true
+share_googleplus: false
+share_linkedin: false
+share_digg: false
+share_tumblr: false
+share_reddit: false
+share_stumbleupon: false
+share_hackernews: false
+
+# Contact form ID
+formspree: xgezgove
+
+text:
+  pagination:
+    newer: 'Newer'
+    older: 'Older'
+  share_buttons:
+    text:         'Share:'
+    facebook:     'Share on Facebook'
+    twitter:      'Share on Twitter'
+    googleplus:   'Share on Google+'
+    linkedin:     'Share on LinkedIn'
+    digg:         'Share on Digg'
+    tumblr:       'Share on Tumblr'
+    reddit:       'Share on Reddit'
+    stumbleupon:  'Share on StumbleUpon'
+    hackernews:   'Share on Hacker News'
+  post:
+    updated:        'Updated'
+    minute_read:    'minute read'
+    related_posts:  'Related Posts'
+    post_footer:    'Lorem ipsum'
+  index:
+    coming_soon: 'Coming soon...'
+  og_locale: 'en_US'
+  contact:
+    email: example@example.com
+    content: ご連絡いただく内容をご記入ください！
+    submit: 送信する
 
 # Build settings
 markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
+permalink: /blog/:year/:month/:day/:title.html
+paginate_path: "/page/:num/"
+paginate: 5
 
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap
+
 exclude:
   - vendor
   - Gemfile

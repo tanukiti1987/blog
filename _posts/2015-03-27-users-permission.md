@@ -9,22 +9,22 @@ Android の開発を初めて、手が止まったところを書いていく。
 
 今回は AndroidManifest.xml について。
 
-# 似たような設定が2つある
+## 似たような設定が2つある
 
 users-permission は、アプリが利用する `権限` をユーザーに許可してもらうための宣言として心得ていましたが、その言葉に近い users-feature というのがあるということが、他のAndroidアプリを見てみると分かりました。
 
 これら2つの名前から察するに、ほとんど機能は似ていそうですが、少しだけ違う模様。
 
-# なにが違うのか
+## なにが違うのか
 
 答えは[ココ](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions) に書いてあるのですが、一応ざっとメモ。
 
-## users-permission
+### users-permission
 
 冒頭述べたように、ユーザーがアプリをインストールする時に、アプリがOSの機能へアクセスすることへの許可を求める機能の種類を記述する。
 OKの上、インストールしてもらえれば、アプリからその機能を使用できる。
 
-## users-feature
+### users-feature
 
 対する feature は端末自身が持っているべき機能を記述するところ。 例えばカメラを使用する際、
 

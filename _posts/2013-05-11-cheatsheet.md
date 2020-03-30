@@ -12,7 +12,7 @@ tags: mac
 ただ、アプリごとにショートカットは違うし、正直覚えきれない。
 そんなときに助けになるアプリをご紹介します。
 
-# CheatSheet
+## CheatSheet
 
 [CheatSheet](http://www.grandtotal.biz/CheatSheet/)（無料）
 
@@ -21,11 +21,11 @@ tags: mac
 
 私が確認している限り、ほぼ全てのアプリで十分なくらいショートカットが表示されます。
 
-### Chrome
+#### Chrome
 
 ![](https://skim.milk200.cc/20130511_cheatsheet/screen1.png)
 
-### Evernote
+#### Evernote
 
 ![](https://skim.milk200.cc/20130511_cheatsheet/screen2.png)
 

@@ -3,9 +3,9 @@ layout: post
 title: Android アプリ作りをなめちゃいかん
 date: 2015-03-16 01:12:37 +0900
 tags: android
-description: iOS でアプリを作ったことがあったので、Androidのアプリづくりはなんとかなるだろうと思っていたんですが、思いのほか、前途多難な滑り出しでメンタル弱ってきたので、そのこころをブログにしました。
+summary: iOS でアプリを作ったことがあったので、Androidのアプリづくりはなんとかなるだろうと思っていたんですが、思いのほか、前途多難な滑り出しでメンタル弱ってきたので、そのこころをブログにしました。
 ---
-# Hello, Android
+## Hello, Android
 
 先週から、Androidアプリの開発が本格的に始まりました。
 
@@ -15,7 +15,7 @@ description: iOS でアプリを作ったことがあったので、Androidの�
 
 そんな心意気で、いざ開発を始めたわけです。
 
-# マジでツライぞ, Android
+## マジでツライぞ, Android
 
 開発が始まり、（当然ではあるけど）iOSと違うところがあまりにも多い。
 
@@ -48,7 +48,7 @@ picker.sourceType = UIImagePickerControllerSourceTypeCamera;
 
 そんな感じでした。
 
-# 最初はこんなもんかも。
+## 最初はこんなもんかも。
 
 と、ツラツラと書いたのですが、まだ一週間。
 
