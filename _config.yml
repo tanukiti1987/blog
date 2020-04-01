@@ -11,9 +11,9 @@ keywords: tanukiti1987, ブログ, ruby, android, ios, iphone, zenfone
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://almond.milk200.cc"
 date_format: "%b %-d, %Y"
-# header_pages:
-#  - about.md
-#  - contact.html
+header_pages:
+ - about.md
+ - contact.html
 
 google_analytics: UA-27693816-5
 
