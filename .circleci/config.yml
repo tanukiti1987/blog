@@ -1,16 +1,16 @@
-defaults: &defaults
-  docker:
-    - image: tanukiti1987/blog-base:0.3
-  working_directory: /root/blog
-  environment:
-    TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+version: 2.1
+executors:
+  blog-base:
+    docker:
+      - image: tanukiti1987/blog-base:0.3
+    working_directory: /root/blog
+    environment:
+      TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 
-version: 2
-jobs:
-  build:
-    <<: *defaults
+commands:
+  bundle-install:
+    description: "bundle install"
     steps:
-      - checkout
       - restore_cache:
           keys:
             - bundle-{{ checksum "Gemfile.lock" }}
@@ -24,6 +24,13 @@ jobs:
       - save_cache:
           key: bundle-{{ checksum "Gemfile.lock" }}
           paths: /root/blog/vendor/bundle
+
+jobs:
+  build:
+    executor: blog-base
+    steps:
+      - checkout
+      - bundle-install
       - run:
           name: jekyll build
           command: JEKYLL_ENV=production bundle exec jekyll build
@@ -31,15 +38,11 @@ jobs:
           root: /root
           paths: blog
   deploy:
-    <<: *defaults
+    executor: blog-base
     steps:
       - attach_workspace:
           at: /root
-      - run:
-          name: bundle install
-          command: |
-              gem update bundler
-              bundle -j8 --path=vendor/bundle
+      - bundle-install
       - run:
           name: sync to s3
           command: bundle exec s3_website push
