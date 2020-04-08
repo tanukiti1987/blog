@@ -2,7 +2,7 @@ version: 2.1
 executors:
   blog-base:
     docker:
-      - image: tanukiti1987/blog-base:0.3
+      - image: tanukiti1987/blog-base:0.4
     working_directory: /root/blog
     environment:
       TZ: "/usr/share/zoneinfo/Asia/Tokyo"
