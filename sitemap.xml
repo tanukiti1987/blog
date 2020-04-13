@@ -33,7 +33,7 @@ sitemap:
     {% unless page.url contains 'assets' %}
       {% unless page.sitemap.exclude == true %}
         <url>
-          <loc>{{ site.url }}{{ page.url | append: "index.html" }}</loc>
+          <loc>{{ site.url }}{{ page.url }}</loc>
           {% if page.sitemap.lastmod %}
             <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
           {% elsif page.date %}

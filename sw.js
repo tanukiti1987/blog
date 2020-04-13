@@ -1,5 +1,7 @@
 ---
 layout: null
+sitemap:
+  exclude: true
 ---
 var CACHE_NAME = "tanukiti1987-{{site.time | date: '%Y%m%d%H%M%S'}}";
 
