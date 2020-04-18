@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+if ENV['JEKYLL_ENV'] == 'production'
+  system 'bundle install --with production'
+  system 'bundle exec jekyll server'
+else
+  system 'bundle install --without production'
+  system 'bundle exec jekyll server --config _config.yml,_config.development.yml'
+end

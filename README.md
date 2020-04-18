@@ -6,5 +6,5 @@
 ## For development
 
 ```bash
-$ bundle exec jekyll server --config _config.yml,_config.development.yml
+$ bin/start_jekyll
 ```
