@@ -1,4 +1,5 @@
 google_analytics: UA-XXXXXXXX-X
 plugins:
+  - jekyll-auto-image
   - jekyll-paginate
   - jekyll-sitemap

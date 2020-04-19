@@ -6,6 +6,7 @@ gem "jekyll", "~> 3.8"
 group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
+  gem 'jekyll-auto-image'
 end
 
 group :production do

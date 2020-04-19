@@ -89,7 +89,11 @@ permalink: /blog/:year/:month/:day/:title.html
 paginate_path: "/page/:num/"
 paginate: 5
 
+# OGP default image
+image: https://skim.milk200.cc/logo/almond.jpg
+
 plugins:
+  - jekyll-auto-image
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-tfidf-related-posts
