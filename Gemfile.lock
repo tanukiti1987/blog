@@ -54,6 +54,7 @@ GEM
     jekyll-auto-image (1.1.3)
       jekyll
     jekyll-paginate (1.1.0)
+    jekyll-purgecss (0.3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-sitemap (1.4.0)
@@ -104,6 +105,7 @@ DEPENDENCIES
   jekyll (~> 3.8)
   jekyll-auto-image
   jekyll-paginate
+  jekyll-purgecss
   jekyll-sitemap
   jekyll-tfidf-related-posts
   packable!
