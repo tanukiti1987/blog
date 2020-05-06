@@ -54,10 +54,12 @@
     <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}">
     <link rel="apple-touch-icon" href="/touch-icon.png"/>
     <link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192"/>
-
+    {% if page.highlight %}
+    <!-- Highlight -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    {% endif %}
 
     {% if site.google_analytics %}
     <script type="text/javascript">
