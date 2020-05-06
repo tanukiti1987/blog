@@ -87,14 +87,11 @@ paginate: 5
 # OGP default image
 image: https://skim.milk200.cc/logo/almond.jpg
 
-css_dir: "css"
-
 plugins:
   - jekyll-auto-image
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-tfidf-related-posts
-  - jekyll-purgecss
 
 exclude:
   - vendor
