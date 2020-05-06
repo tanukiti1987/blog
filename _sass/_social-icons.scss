@@ -2,10 +2,15 @@
   font-size: 1.25rem;
 }
 
-.social-icons a.fa {
+.social-icons a.fa svg {
   cursor: pointer;
+  padding: 0 0.1em;
+  height: 1em;
+}
+
+.social-icons a.fa path {
+  fill-opacity: 0.8;
   opacity: 0.8;
-  padding: 0 0.2em;
 }
 
 .social-icons a.fa:hover {

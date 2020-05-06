@@ -1,0 +1,20 @@
+.fa-facebook,
+.fa-twitter,
+.fa-github,
+.fa-envelope,
+.fa-rss,
+.fa-linkedin {
+  position: relative;
+}
+
+.fa-facebook svg,
+.fa-twitter svg,
+.fa-github svg,
+.fa-envelope svg,
+.fa-rss svg,
+.fa-linkedin svg {
+  position: relative;
+  top: 2px;
+  height: 1rem;
+  max-width: 1rem;
+}
