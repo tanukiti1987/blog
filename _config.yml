@@ -82,7 +82,7 @@ sass:
   style: compressed
 permalink: /blog/:year/:month/:day/:title.html
 paginate_path: "/page/:num/index.html"
-paginate: 5
+paginate: 10
 
 # OGP default image
 image: https://skim.milk200.cc/logo/almond.jpg
