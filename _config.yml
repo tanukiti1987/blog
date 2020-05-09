@@ -87,6 +87,8 @@ paginate: 10
 # OGP default image
 image: https://skim.milk200.cc/logo/almond.jpg
 
+related_posts_count: 7
+
 plugins:
   - jekyll-auto-image
   - jekyll-paginate
