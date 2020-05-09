@@ -81,7 +81,7 @@ sass:
   sass_dir: _sass
   style: compressed
 permalink: /blog/:year/:month/:day/:title.html
-paginate_path: "/page/:num/index.html"
+paginate_path: "/page/:num/"
 paginate: 10
 
 # OGP default image
