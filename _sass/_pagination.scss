@@ -51,3 +51,24 @@
   cursor: not-allowed;
   background-color: #999;
 }
+
+@media (prefers-color-scheme: dark) {
+  .pagination a {
+    text-shadow: none;
+  }
+
+  .pagination a:hover, .pagination a:focus {
+    background: white;
+    color: #333333;
+    font-weight: 900;
+    text-shadow: none;
+  }
+
+  .pagination a:active {
+    background: #f7f7f7;
+  }
+
+  .pagination .pagination-meta {
+    opacity: 0.8;
+  }
+}

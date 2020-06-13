@@ -33,6 +33,7 @@ $viewport-large: 64em;
 
 // Colors
 $blue: #0076df !default;
+$light-blue: #2a8ee8 !default;
 $red: #f95020 !default;
 $green: #00cf26 !default;
 $yellow: #efcc00 !default;
@@ -54,7 +55,9 @@ $darken-4: rgba(#000,.5) !default;
 
 // Links
 $link-color: $blue;
+$link-color-dark: lighten($blue, 30%);
 $link-hover-color: darken($blue, 40%);
+$link-hover-color-dark: $blue;
 
 // Breakpoints
 $breakpoint-md: '(min-width: 52em)';
@@ -95,22 +98,39 @@ $form-field-padding-x: .5rem;
 $pre-border-radius: 0;
 $pre-background-color: #fafafa;
 $hljs-comment: $mid-gray;
+$hljs-comment-dark: $mid-gray;
 $hljs-keyword: $dark-blue;
+$hljs-keyword-dark: $light-blue;
 $hljs-name: $dark-gray;
+$hljs-name-dark: $light-gray;
 $hljs-number: $dark-green;
+$hljs-number-dark: $light-green;
 $hljs-string: $red;
+$hljs-string-dark: $red;
 $hljs-title: $red;
+$hljs-title-dark: $red;
 $hljs-type: $dark-blue;
+$hljs-type-dark: $light-blue;
 $hljs-tag: $dark-blue;
+$hljs-tag-dark: $light-blue;
 $hljs-attribute: $dark-green;
+$hljs-attribute-dark: $light-green;
 $hljs-regexp: $dark-green;
+$hljs-regexp-dark: $light-green;
 $hljs-symbol: $purple;
+$hljs-symbol-dark: $purple;
 $hljs-built-in: $dark-blue;
+$hljs-built-in-dark: $light-blue;
 $hljs-preprocessor: $mid-gray;
+$hljs-preprocessor-dark: $mid-gray;
 $hljs-deletion: $light-pink;
+$hljs-deletion-dark: $light-pink;
 $hljs-addition: $light-green;
+$hljs-addition-dark: $light-green;
 $hljs-change: $dark-blue;
+$hljs-change-dark: $light-blue;
 $hljs-chunk: $light-gray;
+$hljs-chunk-dark: $light-gray;
 
 // Header
 $header-border-top: thin solid #f3f3f3;
@@ -118,12 +138,17 @@ $header-color: $dark-gray;
 $header-bg-color: #fafafa;
 $header-font-weight: 300;
 
+$header-color-dark: $light-gray;
+
 // Nav
 $nav-color: $mid-gray;
+$nav-color-dark: $lighter-gray;
 $nav-link-color: #444;
+$nav-link-color-dark: #FAFAFA;
 $nav-link-padding-x: $space-2;
 $nav-link-border-bottom: 2px solid #444;
 $nav-active-border-bottom: 1px solid $light-gray;
+$nav-link-border-bottom-dark: 1px solid #FAFAFA;
 
 // Footer
 $footer-border-top: thin solid #f3f3f3;

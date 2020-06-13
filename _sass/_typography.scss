@@ -12,6 +12,12 @@ p {
   line-height: 1.5;
 }
 
+@media (prefers-color-scheme: dark) {
+  p {
+    color: #FAFAFA;
+  }
+}
+
 small,
 .small {
   font-size: 0.707rem;
