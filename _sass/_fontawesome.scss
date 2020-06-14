@@ -18,3 +18,18 @@
   height: 1rem;
   max-width: 1rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  .fa-facebook svg,
+  .fa-twitter svg,
+  .fa-github svg,
+  .fa-envelope svg,
+  .fa-rss svg,
+  .fa-linkedin svg {
+    fill: #ffffff;
+
+    .social-icons.right & {
+      fill: #333;
+    }
+  }
+}

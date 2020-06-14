@@ -65,3 +65,26 @@
 .related-posts a:hover {
   text-decoration: underline;
 }
+
+@media (prefers-color-scheme: dark) {
+  .posts .post {
+    border-bottom: thin solid #f3f3f3;
+  }
+
+  .post-link .post-title {
+    color: #FAFAFA;
+  }
+
+  .meta,
+  .post-meta {
+    color: #d6d6d6;
+  }
+
+  .related-post-title {
+    border-bottom: thin solid #f3f3f3;
+  }
+
+  .related-posts a {
+    color: $light-gray;
+  }
+}

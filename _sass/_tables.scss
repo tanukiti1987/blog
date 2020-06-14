@@ -45,3 +45,24 @@ table {
     border-top: 2px solid #333;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  table {
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border-top: 1px solid #f0f0f0;
+        }
+      }
+    }
+    > thead > tr > th {
+      border-bottom: 2px solid #f0f0f0;
+    }
+    > tbody + tbody {
+      border-top: 2px solid #f0f0f0;
+    }
+  }
+}

@@ -38,3 +38,47 @@ button,
   text-shadow: none;
   background-image: none;
 }
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: $link-color-dark;
+    background-image: linear-gradient(to top,
+      rgba(39,39,39,1) 13%,
+      rgba($link-color-dark,.8) 13%,
+      rgba($link-color-dark,.8) 18%,
+      rgba(39,39,39,1) 17%
+    );
+    text-shadow: #272727 1px 0px 0px,#272727 -1px 0px 0px;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    border: 0;
+    color: $link-hover-color-dark;
+    text-decoration: none;
+    background-image: linear-gradient(to top,
+      rgba(39,39,39,1) 13%,
+      rgba($link-hover-color-dark,.8) 13%,
+      rgba($link-hover-color-dark,.8) 17%,
+      rgba(39,39,39,1) 17%
+    );
+    text-shadow: #272727 1px 0px 0px, #272727 -1px 0px 0px;
+  }
+
+  // Correct issues with buttons
+  button,
+  .button {
+    text-shadow: none;
+    background-image: none;
+  }
+
+  .button:hover,
+  .button:focus,
+  .button:active {
+    color: white;
+    text-shadow: none;
+    background-image: none;
+  }
+
+}
